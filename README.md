@@ -1,5 +1,5 @@
 # T-DNA
-Source code for the ACL-IJCNLP 2021 paper entitled `Taming Pre-trained Language Models with N-gram Representations for Low-Resource Domain Adaptation`.
+Source code for the ACL-IJCNLP 2021 paper entitled [Taming Pre-trained Language Models with N-gram Representations for Low-Resource Domain Adaptation](https://aclanthology.org/2021.acl-long.259.pdf).
 
 Our implementation is built on the source code from [huggingface transformers](https://github.com/huggingface/transformers).
 
@@ -152,7 +152,7 @@ glue_output_modes = {
 ```
 
 ### Run
-For FT,
+For `FT`,
 ```angular2html
 python ./examples/run_classification.py --model_name_or_path roberta-base \
 --task_name <task_name> --max_seq_length 256 --per_device_train_batch_size 16 \
@@ -160,7 +160,7 @@ python ./examples/run_classification.py --model_name_or_path roberta-base \
 --data_dir ./data/<task_name>/ --Ngram_path ./ngram/pmi_<task_name>_ngram.txt \
 --fasttext_model_path ./ngram/<task_name>.npy --overwrite_output_dir
 ```
-For TAPT + FT,
+For `TAPT + FT`,
 ```angular2html
 python ./examples/run_language_modeling.py \
 --output_dir=./models/<task_name>_TAPT/ --model_type=roberta  --overwrite_output_dir \
